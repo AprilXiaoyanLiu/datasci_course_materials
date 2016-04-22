@@ -1,3 +1,5 @@
+# Purpose: to calcuate scores for each tweets based on scores file for selected words (AFINN-111.txt). If word in the tweets is not 
+# the file, then the word for that score is 0
 import json
 import sys
 
@@ -7,9 +9,15 @@ def hw():
 def lines(fp):
     print str(len(fp.readlines()))
 
+# command line: python tweet_sentiment.py AFINN-111.txt output1.json
 def main():
-    sent_file = open(sys.argv[1])
-    tweet_file = open(sys.argv[2])
+    sent_file = open(sys.argv[1]) # open the second file in the command line AFINN-111.txt
+    tweet_file = open(sys.argv[2]) # open the third file in the command line coutput1.json
+
+# Thought process: (back-forward process) 
+## find out if the word in each tweet exists in the scores file, if yes, add sum scores
+## involves two files: scores file and tweet file with json type
+## convert json file to python data structures (dictionary) using json.loads
 
     twitterlist = []  # Create list with dictionary
     for line in tweet_file:
