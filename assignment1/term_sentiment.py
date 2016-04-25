@@ -1,4 +1,6 @@
 ''' first methodology: define sentiment metric score as positive_count/neg_count but the result is not correct'''
+''' for example, the word 'football' exists in two tweets. The first tweet has 3 positive words and 1 negative words; the second tweet
+has 5 negative words and 0 postive words, then the sentiment score for football is 3/(1+5) = 0.5'''
 
 '''first methodology''' 
 
