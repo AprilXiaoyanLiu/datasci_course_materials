@@ -33,9 +33,9 @@ def main():
     				count_word[word] += 1
     			count_total[word] = sum(len(x) for x in tweetword if word in x)
     				
-	d = {}
-	for key, val in count_word.items():
-		d[key] = val/count_total[key]
+    d = {}
+    for key, val in count_word.items():
+	d[key] = val/count_total[key]
     		
     for k, v in d.items():
     	print k, float(v)
